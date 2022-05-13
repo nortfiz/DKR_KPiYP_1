@@ -13,6 +13,7 @@ int n = int.Parse(Console.ReadLine());
 
 double q = 0;
 
+
 for (int x = a + h; x <= b; x += h)
 {
     Console.WriteLine("Х равно:" + x);
@@ -21,14 +22,15 @@ for (int x = a + h; x <= b; x += h)
     {
         double r = (Math.Pow(-1, k + 1)) * (Math.Pow(S, 2 * k)) / (2 * k * (2 * k - 1));
         k++;
-        q = q + r;
-       
+        q = q + r;   
     }
-     Console.WriteLine("S(x)=  "+q);
+    Console.WriteLine("S(x)=  " + q);
     
-        double r_2 = S * Math.Atan(S) - Math.Log(Math.Sqrt(1 + Math.Pow(S, 2)), 10);
-        Console.WriteLine("Y(x) = " + r_2);
+    double r_2 = S * Math.Atan(S) - Math.Log(Math.Sqrt(1 + Math.Pow(S, 2)), 10);
+    Console.WriteLine("Y(x) = " + r_2);
 
-        double r_3 = Math.Abs(r_2 - q);
-        Console.WriteLine("Y(x)-S(x) = " + r_3);
- }
+    double r_3 = Math.Abs(r_2 - q);
+    Console.WriteLine("Y(x)-S(x) = " + r_3);
+}
+//Console.WriteLine("S(x)\t\t\tY(x)\t\t\t|Y(x)-S(x)|");
+
