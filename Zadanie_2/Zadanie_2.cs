@@ -22,3 +22,4 @@ for(int j = 0; j < n; j++)
     if (count == m)
         Console.WriteLine("column({0})", j + 1);
 }
+Console.WriteLine();
