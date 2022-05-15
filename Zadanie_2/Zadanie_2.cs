@@ -1,7 +1,7 @@
 ﻿int n = 8;
 int m = 8;
 int[,] mat;
-mat = new int[n, m];
+mat = new int[n, m];// { {1,1,1 },{1,1,1 },{ 1,1,1} };
 Random random = new Random();
 for (int i = 0; i < n; i++)
 {
@@ -13,13 +13,24 @@ for (int i = 0; i < n; i++)
     Console.WriteLine();
 
 }
-for(int j = 0; j < n; j++)
-            {
-    int count = 0;
-    for (int i = 0; i < m; i++)
-        if (mat[i, j] == 1)
-            count++;
-    if (count == m)
-        Console.WriteLine("column({0})", j + 1);
+for (int i = 0; i < n-1; ++i)
+{
+    for (int j = 0; j < m-1; ++j)
+    {
+        
+        if (mat[i+1, j] == mat[i,j+1])
+        {
+            Console.WriteLine("Равны");
+        }
+        else
+        {
+            Console.WriteLine("Неравны");
+        }
+        //break;
+    }
 }
-Console.WriteLine();
+/*for (int j = 0; j < m; j++)
+    {
+
+    }
+*/
